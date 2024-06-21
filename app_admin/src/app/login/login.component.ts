@@ -13,7 +13,6 @@ import { NavbarComponent } from '../navbar/navbar.component';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-
 export class LoginComponent implements OnInit {
   public formError: string = '';
   public credentials = {
@@ -25,7 +24,6 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private authenticationService: AuthenticationService
   ) {}
-  
   ngOnInit() {}
   public onLoginSubmit(): void {
     this.formError = '';
@@ -35,7 +33,6 @@ export class LoginComponent implements OnInit {
       this.doLogin();
     }
   }
-
   private doLogin(): void {
     this.authenticationService
       .login(this.credentials)

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -9,6 +10,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
+
 export class NavbarComponent implements OnInit {
   constructor(private authenticationService: AuthenticationService) {}
   ngOnInit() {}

@@ -9,22 +9,16 @@ const hbs = require('hbs');
 const passport = require('passport');
 
 
+// Bring in the database
+require('./app_api/models/db');
+require('./app_api/config/passport');
+
 // Define routers
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 var travelRouter = require('./app_server/routes/travel');
 var apiRouter = require('./app_api/routes/index');
-
-
 var handlebars = require('hbs');
-
-// Bring in the database
-require('./app_api/models/db');
-
-require('./app_server/database/db');
-
-require('./app_api/config/passport');
-
 var app = express();
 
 // view engine setup

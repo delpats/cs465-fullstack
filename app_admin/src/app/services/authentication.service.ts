@@ -4,15 +4,17 @@ import { User } from '../models/user';
 import { AuthResponse } from '../models/authresponse';
 import { TripDataService } from '../services/trip-data.service';
 
+
+
 @Injectable({
 providedIn: 'root'
 })
 
 export class AuthenticationService {
-constructor(
- @Inject(BROWSER_STORAGE) private storage: Storage,
- private tripDataService: TripDataService
-) { }
+  constructor(
+   @Inject(BROWSER_STORAGE) private storage: Storage,
+   private tripDataService: TripDataService) { }
+
 
 public getToken(): string {
     return String(this.storage.getItem('travlr-token'));
